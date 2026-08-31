@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comissões</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Comissões</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Funcionário</th>
+                    <th>OS</th>
+                    <th>Percentual</th>
+                    <th>Valor Calculado</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui você pode iterar sobre a lista de comissões e exibi-las -->
+                <tr>
+                    <td>1</td>
+                    <td>Nome do Funcionário</td>
+                    <td>123</td>
+                    <td>5.00%</td>
+                    <td>R$ 100.00</td>
+                    <td>Pendente</td>
+                    <td>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr>
+                <!-- Fim da iteração -->
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-success">Adicionar Comissão</a>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

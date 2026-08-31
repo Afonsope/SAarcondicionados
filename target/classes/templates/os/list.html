@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Ordens de Serviço</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Ordens de Serviço</h1>
+        <a href="/os/form" class="btn btn-primary">Nova Ordem de Serviço</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Funcionário</th>
+                    <th>Data de Abertura</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui você deve iterar sobre a lista de ordens de serviço -->
+                <tr th:each="os : ${ordensServico}">
+                    <td th:text="${os.idOs}"></td>
+                    <td th:text="${os.cliente.nome}"></td>
+                    <td th:text="${os.funcionario.nome}"></td>
+                    <td th:text="${#dates.format(os.dataAbertura, 'dd/MM/yyyy')}"></td>
+                    <td th:text="${os.status}"></td>
+                    <td>
+                        <a th:href="@{/os/detail(id=${os.idOs})}" class="btn btn-info">Detalhes</a>
+                        <a th:href="@{/os/form(id=${os.idOs})}" class="btn btn-warning">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

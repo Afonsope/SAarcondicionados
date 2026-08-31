@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Detalhes do Cliente</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Nome: {{ cliente.nome }}</h5>
+                <p class="card-text">CPF: {{ cliente.cpf }}</p>
+                <p class="card-text">Tipo de Cliente: {{ cliente.tipo_cliente }}</p>
+                <p class="card-text">Data de Cadastro: {{ cliente.data_cadastro }}</p>
+                
+                <h5>Telefones:</h5>
+                <ul>
+                    {% for telefone in cliente.telefones %}
+                        <li>{{ telefone.numero }} ({{ telefone.tipo }})</li>
+                    {% endfor %}
+                </ul>
+
+                <h5>E-mails:</h5>
+                <ul>
+                    {% for email in cliente.emails %}
+                        <li>{{ email.email }} ({{ email.tipo }})</li>
+                    {% endfor %}
+                </ul>
+
+                <h5>Endereços:</h5>
+                <ul>
+                    {% for endereco in cliente.enderecos %}
+                        <li>{{ endereco.rua }}, {{ endereco.numero }} - {{ endereco.bairro }}, {{ endereco.cidade }} - {{ endereco.uf }} ({{ endereco.tipo_endereco }})</li>
+                    {% endfor %}
+                </ul>
+
+                <a href="/cliente" class="btn btn-primary">Voltar para a lista de Clientes</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

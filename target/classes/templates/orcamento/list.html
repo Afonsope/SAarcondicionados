@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Orçamentos</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Lista de Orçamentos</h1>
+        <a href="/orcamento/form" class="btn btn-primary mb-3">Novo Orçamento</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Data de Criação</th>
+                    <th>Status</th>
+                    <th>Valor Total</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui você pode usar um loop para iterar sobre a lista de orçamentos -->
+                <!-- Exemplo: -->
+                <!-- <tr th:each="orcamento : ${orcamentos}"> -->
+                <tr>
+                    <td><!-- ID do Orçamento --></td>
+                    <td><!-- Nome do Cliente --></td>
+                    <td><!-- Data de Criação --></td>
+                    <td><!-- Status --></td>
+                    <td><!-- Valor Total --></td>
+                    <td>
+                        <a href="/orcamento/detail/{id}" class="btn btn-info">Detalhes</a>
+                        <a href="/orcamento/form/{id}" class="btn btn-warning">Editar</a>
+                        <form action="/orcamento/delete/{id}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+                <!-- </tr> -->
+                <!-- Fim do exemplo -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
