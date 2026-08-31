@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ERP Ar Condicionado</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <!-- Sidebar -->
+                <div th:replace="fragments/sidebar.html"></div>
+            </div>
+            <div class="col-md-10">
+                <!-- Navbar -->
+                <div th:replace="fragments/navbar.html"></div>
+                <h1 class="mt-4">Dashboard</h1>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Resumo</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Bem-vindo ao sistema ERP para gerenciamento de ar condicionado.</p>
+                        <p>Aqui você pode visualizar informações importantes e acessar diferentes funcionalidades do sistema.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-header">Clientes</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Total de Clientes</h5>
+                                <p class="card-text" th:text="${totalClientes}">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-header">Serviços</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Total de Serviços</h5>
+                                <p class="card-text" th:text="${totalServicos}">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-header">Orçamentos</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Total de Orçamentos</h5>
+                                <p class="card-text" th:text="${totalOrcamentos}">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

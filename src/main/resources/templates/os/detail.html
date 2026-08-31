@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Ordem de Serviço</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes da Ordem de Serviço</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">ID da OS: <span th:text="${os.idOs}"></span></h5>
+                <p class="card-text">Cliente: <span th:text="${os.cliente.nome}"></span></p>
+                <p class="card-text">Funcionário: <span th:text="${os.funcionario.nome}"></span></p>
+                <p class="card-text">Tipo de OS: <span th:text="${os.tipoOs.descricao}"></span></p>
+                <p class="card-text">Data de Abertura: <span th:text="${#dates.format(os.dataAbertura, 'dd/MM/yyyy HH:mm')}"></span></p>
+                <p class="card-text">Status: <span th:text="${os.status}"></span></p>
+                <p class="card-text">Descrição do Problema: <span th:text="${os.descricaoProblema}"></span></p>
+                <p class="card-text">Observações: <span th:text="${os.observacoes}"></span></p>
+                <p class="card-text">Valor Total: R$ <span th:text="${os.valorTotal}"></span></p>
+            </div>
+        </div>
+        <a href="/os" class="btn btn-primary mt-3">Voltar para a lista de OS</a>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

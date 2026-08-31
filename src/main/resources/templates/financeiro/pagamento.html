@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Pagamentos</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Gerenciamento de Pagamentos</h1>
+        <div class="mb-4">
+            <a href="/financeiro/pagamento/novo" class="btn btn-primary">Novo Pagamento</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>OS</th>
+                    <th>Tipo de Pagamento</th>
+                    <th>Valor Total</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui você pode iterar sobre os pagamentos e exibi-los -->
+                <!-- Exemplo: -->
+                <!-- <tr>
+                    <td>${pagamento.id}</td>
+                    <td>${pagamento.os.id}</td>
+                    <td>${pagamento.tipoPagamento.descricao}</td>
+                    <td>${pagamento.valorTotal}</td>
+                    <td>${pagamento.statusPagamento}</td>
+                    <td>
+                        <a href="/financeiro/pagamento/${pagamento.id}/editar" class="btn btn-warning">Editar</a>
+                        <a href="/financeiro/pagamento/${pagamento.id}/deletar" class="btn btn-danger">Deletar</a>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
